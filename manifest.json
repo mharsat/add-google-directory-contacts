@@ -1,0 +1,29 @@
+{
+  "name": "Add Google Directory Contacts",
+  "description": "Selects all the directory contacts and adds them to Google Contacts",
+  "version": "1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "hot-reload.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://contacts.google.com/directory*"
+      ],
+      "js": [
+        "dist/contentScript.js"
+      ],
+      "css": [
+        "dist/contentScript.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "assets/contacts_plus_logo_16.png",
+    "32": "assets/contacts_plus_logo_32.png",
+    "48": "assets/contacts_plus_logo_48.png",
+    "128": "assets/contacts_plus_logo_128.png"
+  }
+}
