@@ -1,7 +1,7 @@
 {
   "name": "Add Google Directory Contacts",
   "description": "Selects all the directory contacts and adds them to Google Contacts",
-  "version": "1",
+  "version": "1.0.1",
   "manifest_version": 3,
   "background": {
     "service_worker": "hot-reload.js"
@@ -9,7 +9,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://contacts.google.com/directory*"
+        "https://contacts.google.com/*directory*"
       ],
       "js": [
         "dist/contentScript.js"
