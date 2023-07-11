@@ -9,7 +9,7 @@ const getDirectorySize = (): number => {
   return parseInt(directorySize, 10)
 }
 const getVisibleContacts = (): NodeListOf<HTMLDivElement> =>
-  document.querySelectorAll('[role=checkbox][aria-labelledby]')
+  document.querySelectorAll('[type=checkbox]')
 
 const getContactId = (contact: HTMLDivElement) =>
   contact.closest('[data-id]').getAttribute('data-id')
